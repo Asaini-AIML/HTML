@@ -59,38 +59,42 @@ p{
   
   .color-btn:checked + label,
   .color-btn:not(:checked) + label {
-    /* position: relative; */
+    position: relative;
     height: 40px;
     transition: all 200ms linear;
     border-radius: 4px;
     width: 40px;
+    overflow: hidden;
+    border: none;
     cursor: pointer;
+    color: #ffeba7;
     margin-right: 10px;
     box-shadow: 0 12px 35px 2px rgba(16, 39, 112, 0.25);
     z-index: 10;
+    background-color: green;
     background-position: center;
     background-size: cover;
     border: 3px solid transparent;
   }
   
-  label.first-Color {
+  label.first-color {
     margin-left: 500px;
-    background-image: url("./image/chair1.png");
+    background-image: url("./image/color1.jpg");
   }
   label.color-2 {
-    background-image: url("./image/chair2.png");
+    background-image: url("./image/color2.jpg");
   }
   label.color-3 {
-    background-image: url("./image/chair3.png");
+    background-image: url("./image/color3.jpg");
   }
   label.color-4 {
-    background-image: url("./image/chair4.png");
+    background-image: url("./image/color4.jpg");
   }
   label.color-5 {
-    background-image: url("./image/chair5.png");
+    background-image: url("./image/color5.jpg");
   }
   label.color-6 {
-    background-image: url("./image/chair6.png");
+    background-image: url("./image/color6.jpg");
   }
   
   .color-btn:checked + label {
@@ -99,58 +103,58 @@ p{
   }
   
   .img-wrap {
-    height: 410px;
-    width: 500px;
-    background-image: url(./image/chair1.png);
     position: absolute;
     top: 100px;
     left: 0;
-    transition: all 550ms linear;
-    transition-delay: 100ms;
-    /* background-position: center top; */
-    background-size: 100%;
-    /* background-repeat: no-repeat; */
+    height: 410px;
+    width: 500px;
     display: inline-block;
     z-index: 9;
+    transition: all 550ms linear;
+    transition-delay: 100ms;
+    background-size: 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-image: url("./image/chair1.png");
     opacity: 0;
   }
   
-  .forcolor-1:checked ~ .imgWrap.chair1 {
+  .for-color-1:checked ~ .img-wrap.chair-1 {
     opacity: 1;
     animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   }
-  .img-wrap.chair2 {
-    background-image: url("./Images/chair2.png");
+  .img-wrap.chair-2 {
+    background-image: url("./image/chair2.png");
   }
-  .forColor2:checked ~ .imgWrap.chair2 {
+  .for-color-2:checked ~ .img-wrap.chair-2 {
     opacity: 1;
     animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   }
-  .imgWrap.chair3 {
-    background-image: url("./Images/chair3.png");
+  .img-wrap.chair-3 {
+    background-image: url("./image/chair3.png");
   }
-  .forColor3:checked ~ .imgWrap.chair3 {
+  .for-color-3:checked ~ .img-wrap.chair-3 {
     opacity: 1;
     animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   }
-  .imgWrap.chair4 {
-    background-image: url("./Images/chair4.png");
+  .img-wrap.chair-4 {
+    background-image: url("./image/chair4.png");
   }
-  .forColor4:checked ~ .imgWrap.chair4 {
+  .for-color-4:checked ~ .img-wrap.chair-4 {
     opacity: 1;
     animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   }
-  .imgWrap.chair5 {
-    background-image: url("./Images/chair5.png");
+  .img-wrap.chair-5 {
+    background-image: url("./image/chair5.png");
   }
-  .forColor5:checked ~ .imgWrap.chair5 {
+  .for-color-5:checked ~ .img-wrap.chair-5 {
     opacity: 1;
     animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   }
-  .imgWrap.chair6 {
-    background-image: url("./Images/chair6.png");
+  .img-wrap.chair-6 {
+    background-image: url("./image/chair6.png");
   }
-  .forColor6:checked ~ .imgWrap.chair6 {
+  .for-color-6:checked ~ .img-wrap.chair-6 {
     opacity: 1;
     animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   }
@@ -173,7 +177,7 @@ p{
       transform: translate3d(3px, 0, 0) rotate(3deg);
     }
   }
-  .backColor {
+  .back-color {
     position: fixed;
     top: 0;
     left: 0;
@@ -185,16 +189,54 @@ p{
     transition: all 250ms linear;
     transition-delay: 300ms;
   }
-  .infoWrap {
+  .back-color.chair-2{
+    background-image: linear-gradient(196deg,#4c4c4c,#262626);
+    opacity: 0;
+  }
+  .for-color-2:checked~ .back-color.chair-2{
+       opacity: 1;
+  }
+  .back-color.chair-3{
+    background-image: linear-gradient(196deg,#8a9fb2,#5f7991);
+
+    opacity: 0;
+  }
+  .for-color-3:checked~ .back-color.chair-3{
+    opacity: 1;
+}
+.back-color.chair-4{
+  background-image: linear-gradient(196deg,#97afc3,#6789a7);
+
+  opacity: 0;
+}
+.for-color-4:checked~ .back-color.chair-4{
+  opacity: 1;
+}
+.back-color.chair-5{
+  background-image: linear-gradient(196deg,#afa6a0,#8c7f76);
+  opacity: 0;
+}
+.for-color-5:checked~ .back-color.chair-5{
+  opacity: 1;
+}
+.back-color.chair-6{
+  background-image: linear-gradient(196deg,#aaadac,#838786);
+
+  opacity: 0;
+}
+.for-color-6:checked~ .back-color.chair-6{
+  opacity: 1;
+}
+  .info-wrap {
     position: relative;
     margin-left: 500px;
     z-index: 10;
     display: block;
-  
     text-align: left;
   }
   
-  .titleUp {
+  .title-up {
+    font-family: "Poppins" sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -205,6 +247,7 @@ p{
     margin-bottom: 10px;
   }
   h2 {
+    font-family: "Poppins" sans-serif;
     font-weight: 800;
     font-size: 34px;
     line-height: 1.2;
@@ -213,6 +256,7 @@ p{
     margin-bottom: 10px;
   }
   h4 {
+    font-family: "Poppins" sans-serif;
     font-weight: 500;
     font-size: 26px;
     line-height: 1.2;
@@ -227,6 +271,7 @@ p{
     padding-left: 15px;
   }
   h5 {
+    font-family: "Poppins" sans-serif;
     font-weight: 600;
     font-size: 18px;
     line-height: 1.2;
@@ -236,8 +281,8 @@ p{
   }
   
   
-  .descBtn:checked + label,
-  .descBtn:not(:checked) + label {
+  .desc-btn:checked + label,
+  .desc-btn:not(:checked) + label {
     position: relative;
     transition: all 200ms linear;
     display: inline-block;
@@ -252,14 +297,14 @@ p{
     margin-right: 25px;
     opacity: 0.5;
   }
-  .descBtn:checked + label {
+  .desc-btn:checked + label {
     opacity: 1;
   }
-  .descBtn:not(:checked) + label:hover {
+  .desc-btn:not(:checked) + label:hover {
     opacity: 0.8;
   }
   
-  .descSec {
+  .desc-sec {
     padding-top: 20px;
     padding-bottom: 30px;
     transition: all 250ms linear;
@@ -269,29 +314,29 @@ p{
     transform: translateY(20px);
     color: #fff;
   }
-  .descSec.accor2 {
+  .desc-sec.actor-2 {
     position: absolute;
     top: 25px;
     left: 0;
     width: 100%;
     z-index: 2;
   }
-  #desc1:checked ~ .descSec.accor1 {
+  #desc-1:checked ~ .desc-sec.actor-1 {
     opacity: 1;
     pointer-events: auto;
     transform: translateY(0);
   }
-  #desc2:checked ~ .descSec.accor2 {
+  #desc-2:checked ~ .desc-sec.actor-2 {
     opacity: 1;
     pointer-events: auto;
     transform: translateY(0);
   }
-  .sectionInline {
+  .section-inline {
     position: relative;
     display: inline-block;
     margin-right: 20px;
   }
-  .sectionInline p span {
+  .section-inline p span {
     font-size: 30px;
     line-height: 1.1;
   }
@@ -310,8 +355,8 @@ p{
     justify-content: center;
     border: none;
     cursor: pointer;
-    /* overflow: hidden; */
-    /* background-color: transparent; */
+    overflow: hidden; 
+     background-color: transparent;
     color: #fff;
     box-shadow: 0 6px 15px 0 rgba(16, 39, 112, 0.15);
     transition: all 250ms linear;
@@ -337,19 +382,19 @@ p{
     box-shadow: 0 12px 35px 0 rgba(16, 39, 112, 0.25);
     background-color: #333;
   }
-  .forColor2:checked ~ .infoWrap .btn:before {
+  .for-color-2:checked ~ .info-wrap .btn:before {
     background-color: #1a1a1a;
   }
-  .forColor3:checked ~ .infoWrap .btn:before {
+  .for-color-3:checked ~ .info-wrap .btn:before {
     background-color: #40566e;
   }
-  .forColor4:checked ~ .infoWrap .btn:before {
+  .for-color-4:checked ~ .info-wrap .btn:before {
     background-color: #5e89b2;
   }
-  .forColor5:checked ~ .infoWrap .btn:before {
+  .for-color-5:checked ~ .info-wrap .btn:before {
     background-color: #8c7f76;
   }
-  .forColor6:checked ~ .infoWrap .btn:before {
+  .for-color-6:checked ~ .info-wrap .btn:before {
     background-color: #5d6160;
   }
   
